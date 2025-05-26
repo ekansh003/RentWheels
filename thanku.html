@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Visiting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-message">
+            <h1>Thank You for Visiting!</h1>
+            <p id="one">your order has been approved</p>
+            <p id="two">Thank You For Visiting</p>
+            <br>
+            <button class="start-button" onclick="window.location.href='index.html'">Go To Home Page</button>
+        </div>
+    </div>
+    <img src="https://kalingatv.com/wp-content/uploads/2020/07/Car-and-Bike.jpg" alt="" srcset="">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+background-color: beige;
+}
+
+.start-button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #ff6a00;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: #ee0979;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+            transform: translateY(-5px);
+        }
+
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.thank-you-message h1 {
+    font-size: 3rem;
+    color: #4CAF50;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideUp 1s forwards 0.5s;
+}
+
+.thank-you-message p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 10px;
+    opacity: 0;
+    animation: slideUp 1s forwards 1s;
+}
+#one{
+    color:crimson
+}
+#two{
+    color: orangered;
+}
+
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .thank-you-message h1 {
+        font-size: 2rem;
+    }
+
+    .thank-you-message p {
+        font-size: 1rem;
+    }
+}
+</style>
+</body>
+</html>

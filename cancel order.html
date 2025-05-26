@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Order & Booking - RentWheel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            animation: fadeInDown 1s;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+        main {
+            padding: 2rem;
+            animation: fadeIn 1.5s;
+        }
+        section {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 1s;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin-bottom: 0.5rem;
+        }
+        form input, form textarea, form select, form button {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #ff6f61;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        body{
+            background-image: url(bmw.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RentWheel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="cancel.html">Cancel Order</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cancel-order">
+            <h2>Cancel Your Booking</h2>
+            <form id="cancel-form" action="/cancel-order" method="POST">
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order_id" placeholder="Enter your Order ID" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+
+                <label for="reason">Reason for Cancellation:</label>
+                <textarea id="reason" name="reason" placeholder="Provide a reason for cancellation" required></textarea>
+
+                <button type="submit">Cancel Booking</button>
+            </form>
+        </section>
+
+        <section id="new-booking">
+            <h2>Make a New Booking</h2>
+            <form id="booking-form" action="/book" method="POST">
+                <label for="vehicle-type">Vehicle Type:</label>
+                <select id="vehicle-type" name="vehicle_type" required>
+                    <option value="bike">Bike</option>
+                    <option value="car">Car</option>
+                    <option value="scooter">Van</option>
+                    <option value="scooter">Truck</option>
+                </select>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup_date" required>
+
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return_date" required>
+
+                <label for="location">Pickup Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter pickup location" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RentWheel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

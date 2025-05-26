@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Wheels - User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .captcha {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .captcha img {
+            margin-bottom: 10px;
+        }
+        .captcha input {
+            width: 80%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up!</h2>
+        <form action="#" method="POST">
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter the password" required>
+            <!-- Age -->
+            <label for="Age">Age:</label>
+            <input type="number" id="age" name="age" required min="18" max="100" placeholder="Enter your age">
+            <label for="email">E-mail:</label>
+            <input type="text" id="e mail" name="e mail"  placeholder="enter your E-mail">
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required placeholder="Enter your address">
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10-digit phone number">
+            <!-- PAN Number -->
+            <label for="pan">PAN Number:</label>
+            <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="Enter PAN number">
+            <!-- Aadhaar Number -->
+            <label for="aadhaar">Aadhaar Number:</label>
+            <input type="text" id="aadhaar" name="aadhaar" required pattern="[0-9]{12}" placeholder="Enter 12-digit Aadhaar number">
+            <label for="Create password">Create password:</label>
+            <input type="text" id="password" name="password" required pattern="[0-9]{12}" placeholder="Enter your password">
+            <label for="Renter the password">Re-enter  password:</label>
+            <input type="text" id="password" name="password" required pattern="[0-9]{12}" placeholder="Re-enter password">
+            <!-- CAPTCHA -->
+            <div class="captcha">
+                <label for="captcha">Please enter the text in the image below:</label><br>
+                <img src="https://via.placeholder.com/150x50?text=CAPTCHA" alt="CAPTCHA Image"><br>
+                <input type="text" id="captcha" name="captcha" required>
+            </div>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>

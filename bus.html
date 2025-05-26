@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .bus-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        .bus-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .bus-card:hover {
+            transform: scale(1.05);
+        }
+        .bus-card img {
+            width: 100%;
+            height: auto;
+        }
+        .bus-card h3 {
+            padding: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .bus-card p {
+            padding: 0 10px;
+            font-size: 1em;
+            color: #555;
+        }
+        @media screen and (max-width: 768px) {
+            .bus-card {
+                width: 45%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .bus-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buses</h1>
+        <div class="bus-section">
+            <!-- Intercity Bus -->
+            <div class="bus-card">
+                <a style="color:  black; text-decoration: none;" href="intercitybus.html">
+                <img src="https://www.financialexpress.com/wp-content/uploads/2022/11/Bus11July_1.jpg" alt="Intercity Bus">
+                <h3>Intercity Bus</h3>
+                <p>A long-distance bus designed for travel between cities, offering comfort for extended journeys.</p>
+                <a href="#" class="cta-button">Learn More</a></a>
+            </div>
+            <!-- Minibus -->
+            <div class="bus-card">
+                <a style="color:  black; text-decoration: none;" href="minibus.html">
+                <img src="https://www.asparkholidays.com/uploads/12696_26seater.jpg" alt="Minibus">
+                <h3>Minibus</h3>
+                <p>A smaller bus typically used for short trips or for a smaller group of passengers.</p>
+                <a href="#" class="cta-button">Learn More</a></a>
+            </div>
+            <!-- Coach Bus -->
+            <div class="bus-card">
+                <a style="color:  black; text-decoration: none;" href="coachbus.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTITzr7eMQJhNlLjX10AzMLaZvNCL0dQ0AYxg&s" alt="Coach Bus">
+                <h3>Coach Bus</h3>
+                <p>A large, comfortable bus used for longer trips, often equipped with amenities like reclining seats and restrooms.</p>
+                <a href="#" class="cta-button">Learn More</a></a>
+            </div>
+            <!-- Tour Bus -->
+            <div class="bus-card">
+                <a style="color:  black; text-decoration: none;" href="tourbus.html">
+                <img src="https://media.istockphoto.com/id/135327019/photo/white-passenger-bus.jpg?s=612x612&w=0&k=20&c=sRU5BpOsY6fyYj9pMiAxz0dLML--uoNl7rIXelRbFnc=" alt="Tour Bus">
+                <h3>Tour Bus</h3>
+                <p>A bus designed for sightseeing and guided tours, with large windows for scenic views.</p>
+                <a href="#" class="cta-button">Learn More</a></a>
+            </div>
+            <!-- Luxury Bus -->
+            <div class="bus-card">
+                <a style="color:  black; text-decoration: none;" href="luxurybus.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTdJpKvigtFtmJvOczqHy44DMiguKzkJnBw&s" alt="Luxury Bus">
+                <h3>Luxury Bus</h3>
+                <p>A high-end bus offering luxurious amenities, including plush seats, entertainment, and premium services.</p>
+                <a href="#" class="cta-button">learn more</a></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

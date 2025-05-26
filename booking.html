@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ride | Rent Wheels</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-family: sans-serif;
+            color: #2d2d2d;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .booking-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-container {
+            margin-bottom: 40px;
+        }
+
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #ee0979;
+        }
+
+        .bookings-info {
+            margin-top: 20px;
+        }
+
+        .bookings-info table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .bookings-info th, .bookings-info td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .bookings-info th {
+            background-color: #ff6a00;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Book Your Ride with Rent Wheels</h1>
+    <div class="booking-container">
+
+        <!-- Booking Form -->
+        <div class="form-container">
+            <h2>Fill in your details</h2>
+            <form id="booking-form">
+                <input type="text" id="full-name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone-number" placeholder="Phone Number" required>
+                <select id="car-selection" required>
+                    <option value="">Select vechicle</option>
+                    <option value="Toyota Corolla">Toyota Corolla</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <option value="BMW X5">BMW X5</option>
+                    <option value="Audi A4">Audi A4</option>
+                </select>
+                <input type="date" id="start-date" placeholder="Start Date" required>
+                <input type="date" id="end-date" placeholder="End Date" required>
+                <button type="submit"><a href="thanku.html" style="text-decoration: none; color: white;"> Book Now</a></button>
+            </form>
+        </div>
+
+        <!-- Bookings Information -->
+        <div class="bookings-info">
+            <h2>Your Previous Bookings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Car</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Toyota Corolla</td>
+                        <td>2024-12-10</td>
+                        <td>2024-12-15</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Honda Civic</td>
+                        <td>2024-12-20</td>
+                        <td>2024-12-25</td>
+                        <td>Pending</td>
+                    </tr>
+                    <!-- More bookings will be dynamically added here in a real app -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Rent Wheels. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // Handle the form submission
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+            const car = document.getElementById('car-selection').value;
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+
+            // Create a new row in the table (this is just a placeholder, ideally, this should be inserted dynamically from the backend)
+            const tableBody = document.querySelector('.bookings-info tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>#003</td>
+                <td>${car}</td>
+                <td>${startDate}</td>
+                <td>${endDate}</td>
+                <td>Pending</td>
+            `;
+            tableBody.appendChild(newRow);
+
+            // Clear the form
+            document.getElementById('booking-form').reset();
+
+            alert('Your booking has been submitted!');
+        });
+    </script>
+
+</body>
+</html>
